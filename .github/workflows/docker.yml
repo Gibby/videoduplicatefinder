@@ -57,10 +57,10 @@ jobs:
           # If needed, we can add more platforms when requested.
           # linux/amd64 - For Linux and Mac Intel
           # linux/arm64 - For Linux and Mac M1
-          platforms: "linux/amd64, linux/arm64"
+          platforms: "linux/amd64, linux/arm64, windows/amd64"
           # Do not push pull requests
           #push: ${{ github.event_name != 'pull_request' }}
           # Push pull requests so they can be tested - If enabled, setup - https://github.com/vlaurin/action-ghcr-prune
-          #push: true
+          push: true
           tags: ${{ steps.meta-ghcr.outputs.tags }}
           labels: ${{ steps.meta-ghcr.outputs.labels }}
